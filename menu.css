@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("ARQUIVOS/menu.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+::selection {
+  background-color: rgb(82, 3, 3);
+  color: rgb(206, 199, 199);
+}
+
+h1 {
+  color: rgb(95, 86, 76);
+  width: 200px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.botao1 {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  font-family: Arial;
+  font-size: 20px;
+  transition: 0.3s;
+  animation: pulsar 2s infinite;
+}
+.botao1:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1);
+}
+.botao1:active {
+  transform: scale(0.8);
+}
+@keyframes pulsar {
+  0% {
+    border-color: rgba(168, 117, 117, 0.795);
+    box-shadow: 0 0 5px rgba(168, 117, 117, 0.795);
+  }
+  50% {
+    border-color: rgba(235, 187, 187, 0.795);
+    box-shadow: 0 0 20px rgba(235, 187, 187, 0.795);
+  }
+  100% {
+    border-color: rgba(168, 117, 117, 0.795);
+    box-shadow: 0 0 5px rgba(168, 117, 117, 0.795) e;
+  }
+}
+
+.botao2 {
+  width: 200px;
+  padding: 20px;
+  margin: 20px auto;
+  display: block;
+  background-color: rgba(50, 50, 50, 0.8);
+  color: rgba(102, 102, 102, 0.686);
+  border: 1px solid rgba(68, 68, 68, 0.871);
+  font-family: "Courier New", monospace;
+  transition:
+    background-color 0.8s,
+    transform 1s;
+}
+.botao2:hover {
+  background-color: rgba(88, 4, 0, 0.984);
+  transform: rotate(180deg);
+}

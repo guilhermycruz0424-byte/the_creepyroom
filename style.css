@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("ARQUIVOS/S.game.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titulo {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: rgba(94, 86, 86, 0.74);
+  font: italic;
+  font-size: 40px;
+  animation: piscar 1.5s infinite;
+}
+
+.msg {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  font-size: 22px;
+  font-family: monospace;
+  color: gray;
+  opacity: 0;
+  pointer-events: none;
+}
+.area:hover .msg {
+  width: calc(var(--letras) * 1ch);
+  opacity: 1;
+  display: inline-block;
+  animation: digitar 1.7s steps(var(--letras)) forwards;
+}
+
+.msg2 {
+  position: relative;
+  top: -30px;
+  left: 0;
+  font-size: 20px;
+  font-family: inherit;
+  color: yellow;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+}
+.area:hover .msg2 {
+  opacity: 1;
+  animation: piscar 1.3s infinite;
+}
+
+.msg3 {
+  position: absolute;
+  top: -40px;
+  left: 7px;
+  font-size: 20px;
+  font-family: monospace;
+  color: gray;
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.area:hover .msg3 {
+  top: 40px;
+  opacity: 1;
+}
+
+.area {
+  position: absolute;
+  cursor: pointer;
+}
+
+.tv {
+  top: 350px;
+  left: 1420px;
+  width: 300px;
+  height: 200px;
+}
+
+.quadro {
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 350px;
+}
+
+.caixa {
+  top: 620px;
+  left: 430px;
+  width: 190px;
+  height: 200px;
+}
+
+.abajur {
+  top: 300px;
+  left: 120px;
+  width: 200px;
+  height: 300px;
+}
+
+.mesa {
+  top: 650px;
+  left: 940px;
+  width: 400px;
+  height: 200px;
+}
+
+.sofa {
+  top: 500px;
+  left: 600px;
+  width: 580px;
+  height: 170px;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes digitar {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(var(--letras) * 1ch);
+  }
+}
